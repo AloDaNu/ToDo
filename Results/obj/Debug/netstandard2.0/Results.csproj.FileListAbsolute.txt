@@ -1,0 +1,10 @@
+/Users/dimamilushkin/RiderProjects/ToDo/Results/bin/Debug/netstandard2.0/Results.deps.json
+/Users/dimamilushkin/RiderProjects/ToDo/Results/bin/Debug/netstandard2.0/Results.dll
+/Users/dimamilushkin/RiderProjects/ToDo/Results/bin/Debug/netstandard2.0/Results.pdb
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.csproj.AssemblyReference.cache
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.AssemblyInfoInputs.cache
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.AssemblyInfo.cs
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.csproj.CoreCompileInputs.cache
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.dll
+/Users/dimamilushkin/RiderProjects/ToDo/Results/obj/Debug/netstandard2.0/Results.pdb
