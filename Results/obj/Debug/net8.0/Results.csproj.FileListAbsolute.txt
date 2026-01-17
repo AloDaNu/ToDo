@@ -1,0 +1,12 @@
+C:\Users\dimamilushkin\source\repos\ToDo\Results\bin\Debug\net8.0\Results.deps.json
+C:\Users\dimamilushkin\source\repos\ToDo\Results\bin\Debug\net8.0\Results.dll
+C:\Users\dimamilushkin\source\repos\ToDo\Results\bin\Debug\net8.0\Results.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.csproj.AssemblyReference.cache
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.AssemblyInfoInputs.cache
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.AssemblyInfo.cs
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.csproj.CoreCompileInputs.cache
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.dll
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\refint\Results.dll
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\Results.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\Results\obj\Debug\net8.0\ref\Results.dll

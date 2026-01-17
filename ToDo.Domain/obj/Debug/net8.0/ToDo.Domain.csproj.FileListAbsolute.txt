@@ -1,0 +1,17 @@
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.csproj.AssemblyReference.cache
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.AssemblyInfoInputs.cache
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.AssemblyInfo.cs
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.deps.json
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\ToDo.Domain.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\DDD.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\Results.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\DDD.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\bin\Debug\net8.0\Results.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Dom.0C2DC879.Up2Date
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\refint\ToDo.Domain.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ToDo.Domain.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.Domain\obj\Debug\net8.0\ref\ToDo.Domain.dll
