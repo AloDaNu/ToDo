@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             toolPanel = new Panel();
+            refreshButton = new Button();
             addButton = new Button();
             taskListContainer = new FlowLayoutPanel();
-            refreshButton = new Button();
+            searchBox = new TextBox();
             toolPanel.SuspendLayout();
             SuspendLayout();
             // 
             // toolPanel
             // 
             toolPanel.BackColor = SystemColors.GradientInactiveCaption;
+            toolPanel.Controls.Add(searchBox);
             toolPanel.Controls.Add(refreshButton);
             toolPanel.Controls.Add(addButton);
             toolPanel.Dock = DockStyle.Bottom;
@@ -47,10 +49,21 @@
             toolPanel.Size = new Size(729, 98);
             toolPanel.TabIndex = 0;
             // 
+            // refreshButton
+            // 
+            refreshButton.Anchor = AnchorStyles.Bottom;
+            refreshButton.Location = new Point(635, 65);
+            refreshButton.Margin = new Padding(3, 2, 3, 2);
+            refreshButton.Name = "refreshButton";
+            refreshButton.Size = new Size(82, 22);
+            refreshButton.TabIndex = 1;
+            refreshButton.Text = "Refresh";
+            refreshButton.UseVisualStyleBackColor = true;
+            // 
             // addButton
             // 
             addButton.Anchor = AnchorStyles.Bottom;
-            addButton.Location = new Point(327, 67);
+            addButton.Location = new Point(12, 65);
             addButton.Margin = new Padding(3, 2, 3, 2);
             addButton.Name = "addButton";
             addButton.Size = new Size(82, 22);
@@ -69,16 +82,12 @@
             taskListContainer.Size = new Size(729, 335);
             taskListContainer.TabIndex = 1;
             // 
-            // refreshButton
+            // searchBox
             // 
-            refreshButton.Anchor = AnchorStyles.Bottom;
-            refreshButton.Location = new Point(635, 65);
-            refreshButton.Margin = new Padding(3, 2, 3, 2);
-            refreshButton.Name = "refreshButton";
-            refreshButton.Size = new Size(82, 22);
-            refreshButton.TabIndex = 1;
-            refreshButton.Text = "Refresh";
-            refreshButton.UseVisualStyleBackColor = true;
+            searchBox.Location = new Point(223, 63);
+            searchBox.Name = "searchBox";
+            searchBox.Size = new Size(253, 23);
+            searchBox.TabIndex = 2;
             // 
             // TaskForm
             // 
@@ -91,6 +100,7 @@
             Name = "TaskForm";
             Text = "ToDo";
             toolPanel.ResumeLayout(false);
+            toolPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -100,5 +110,6 @@
         private FlowLayoutPanel taskListContainer;
         private Button addButton;
         private Button refreshButton;
+        private TextBox searchBox;
     }
 }

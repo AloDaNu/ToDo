@@ -7,13 +7,17 @@ using ToDo.Application.Dtos;
 using ToDo.View.Abstractions.Delegates;
 using ToDo.View.Abstractions.Views;
 using ToDo.WinForms.Control;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ToDo.WinForms.Forms
 {
     public partial class TaskForm : Form
     {
         private IServiceScope _scope;
+        private List<TaskDto> _allTasks = new();
         private IServiceProvider _serviceProvider;
+        private string _currentSearch = "";
 
         public TaskForm(IServiceProvider serviceProvider)
         {
@@ -24,10 +28,12 @@ namespace ToDo.WinForms.Forms
 
             refreshButton.Click += OnRefreshClicked;
             addButton.Click += OnAddClicked;
+            searchBox.TextChanged += OnSearchTextChanged;
         }
         protected override void OnLoad(EventArgs e)
         {
             Result<IReadOnlyCollection<TaskDto>> tasksResult = GetTasks();
+            LoadAllTasks();
             LoadTasks(tasksResult.IsSuccess ? tasksResult.Content : Array.Empty<TaskDto>());
         }
 
@@ -51,6 +57,73 @@ namespace ToDo.WinForms.Forms
             else
                 MessageBox.Show("Deletion succed", "Succesful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void OnSearchTextChanged(object? sender, EventArgs e)
+        {
+            _currentSearch = searchBox.Text.Trim();
+            PerformSearch();
+        }
+
+        private void PerformSearch()
+        {
+            if (string.IsNullOrWhiteSpace(_currentSearch))
+            {
+                DisplayTasks(_allTasks);
+            }
+            else
+            {
+                var filteredTasks = FilterTasks(_allTasks, _currentSearch);
+                DisplayTasks(filteredTasks);
+            }
+        }
+
+        private void DisplayTasks(List<TaskDto> tasks)
+        {
+            taskListContainer.Controls.Clear();
+            taskListContainer.SuspendLayout();
+
+            foreach (TaskDto task in tasks)
+            {
+                TaskControl taskControl = new TaskControl(
+                    task.Id,
+                    task.Completed,
+                    task.Title,
+                    task.Description,
+                    task.Deadline,
+                    OnDeleteClicked,
+                    OnEditClicked,
+                    OnCheckClicked);
+
+                taskListContainer.Controls.Add(taskControl);
+            }
+
+            taskListContainer.ResumeLayout(); 
+        }
+
+        private List<TaskDto> FilterTasks(List<TaskDto> tasks, string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+                return tasks;
+
+            var searchLower = searchText.ToLowerInvariant();
+
+            return tasks.Where(task =>
+                (task.Title?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                (task.Description?.Contains(searchLower, StringComparison.OrdinalIgnoreCase) ?? false)
+            ).ToList();
+        }
+
+
+        private void LoadAllTasks()
+        {
+            ITaskGetFeature taskGetFeature = _serviceProvider.GetRequiredService<ITaskGetFeature>();
+            Result<IReadOnlyCollection<TaskDto>> taskResult = taskGetFeature.Get();
+
+            if (taskResult.IsSuccess)
+            {
+                _allTasks = taskResult.Content.ToList();
+            }
         }
 
         private void OnCheckClicked(Guid taskId, bool isCompleted)
@@ -101,6 +174,7 @@ namespace ToDo.WinForms.Forms
 
                 taskListContainer.Controls.Add(taskControl);
             }
+            LoadAllTasks();
         }
 
         public void OnRefreshClicked(object? sender, EventArgs e)

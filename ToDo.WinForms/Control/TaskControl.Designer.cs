@@ -33,11 +33,13 @@
             deleteButton = new Button();
             descriptionLabel = new Label();
             taskIsCompletedCheckBox = new CheckBox();
+            deadlineStateLabel = new Label();
             taskGroup.SuspendLayout();
             SuspendLayout();
             // 
             // taskGroup
             // 
+            taskGroup.Controls.Add(deadlineStateLabel);
             taskGroup.Controls.Add(editButton);
             taskGroup.Controls.Add(deleteButton);
             taskGroup.Controls.Add(descriptionLabel);
@@ -78,7 +80,7 @@
             // 
             descriptionLabel.Anchor = AnchorStyles.Left;
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new Point(81, 64);
+            descriptionLabel.Location = new Point(27, 60);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new Size(67, 15);
             descriptionLabel.TabIndex = 1;
@@ -88,12 +90,22 @@
             // 
             taskIsCompletedCheckBox.Anchor = AnchorStyles.Left;
             taskIsCompletedCheckBox.AutoSize = true;
-            taskIsCompletedCheckBox.Location = new Point(18, 64);
+            taskIsCompletedCheckBox.Location = new Point(6, 61);
             taskIsCompletedCheckBox.Margin = new Padding(3, 2, 3, 2);
             taskIsCompletedCheckBox.Name = "taskIsCompletedCheckBox";
             taskIsCompletedCheckBox.Size = new Size(15, 14);
             taskIsCompletedCheckBox.TabIndex = 0;
             taskIsCompletedCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // deadlineStateLabel
+            // 
+            deadlineStateLabel.Anchor = AnchorStyles.Left;
+            deadlineStateLabel.AutoSize = true;
+            deadlineStateLabel.Location = new Point(6, 18);
+            deadlineStateLabel.Name = "deadlineStateLabel";
+            deadlineStateLabel.Size = new Size(52, 15);
+            deadlineStateLabel.TabIndex = 4;
+            deadlineStateLabel.Text = "deadline";
             // 
             // TaskControl
             // 
@@ -115,5 +127,6 @@
         private Button editButton;
         private Button deleteButton;
         private Label descriptionLabel;
+        private Label deadlineStateLabel;
     }
 }
