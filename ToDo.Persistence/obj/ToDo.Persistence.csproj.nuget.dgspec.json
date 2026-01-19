@@ -405,6 +405,10 @@
               "target": "Package",
               "version": "[2.0.3, )"
             },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
             "System.Text.Json": {
               "target": "Package",
               "version": "[8.0.5, )"

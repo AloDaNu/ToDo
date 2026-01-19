@@ -21,8 +21,8 @@ namespace ToDo.WinForms.StartUp
         {
             return services.AddScoped<ITaskRepository, TaskRepository>()
                 .AddScoped<IUnitOfWork, UnitOfWork>()
-                .AddDbContext<ApplicationDbContext>(options => options.UseSqlServer
-                (configuration.GetConnectionString(nameof(ApplicationDbContext))));
+                .AddDbContext<ApplicationDbContext>(options => options.UseMySql(configuration.GetConnectionString(nameof(ApplicationDbContext)),
+                                                              ServerVersion.AutoDetect(configuration.GetConnectionString(nameof(ApplicationDbContext)))));
         }
     }
 }

@@ -78,3 +78,5 @@ C:\Users\dimamilushkin\Source\Repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\
 C:\Users\dimamilushkin\Source\Repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\dimamilushkin\Source\Repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\ToDo.Persistence.dll
 C:\Users\dimamilushkin\Source\Repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\ToDo.Persistence.pdb
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\MySqlConnector.dll
+C:\Users\dimamilushkin\source\repos\ToDo\ToDo.WinForms\bin\Debug\net8.0-windows\Pomelo.EntityFrameworkCore.MySql.dll

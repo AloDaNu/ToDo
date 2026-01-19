@@ -12,7 +12,7 @@ namespace ToDo.WinForms.StartUp
     {
         public static IServiceCollection AddApplication(this IServiceCollection services, IConfiguration configuration)
         {
-            return services.AddApplication(configuration)
+            return services
                 .AddFactory(configuration)
                 .AddProviders(configuration)
                 .AddFeatures(configuration)

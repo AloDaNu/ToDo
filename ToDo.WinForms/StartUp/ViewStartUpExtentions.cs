@@ -15,7 +15,7 @@ namespace ToDo.WinForms.StartUp
             IConfiguration configuration)
         {
             return services
-                .AddScoped<AddForm>()
+                .AddTransient<AddForm>()
                 .AddTransient<EditForm>()
                 .AddTransient<TaskForm>();
         }

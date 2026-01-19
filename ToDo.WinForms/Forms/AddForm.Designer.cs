@@ -18,6 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+
         }
 
         #region Windows Form Designer generated code
@@ -125,13 +126,16 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "AddForm";
             Text = "Add";
-            WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Minimized;
             titleGroup.ResumeLayout(false);
             titleGroup.PerformLayout();
             descriptionGroup.ResumeLayout(false);
             descriptionGroup.PerformLayout();
             deadlineGroup.ResumeLayout(false);
             ResumeLayout(false);
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
         }
 
         #endregion

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,9 @@ namespace ToDo.WinForms.Control
                            string title,
                            string description,
                            long? deadline,
-                           Action<Guid> deleteCallBack)
+                           Action<Guid> deleteCallBack,
+                           Action<Guid> editCallBack,
+                           Action<Guid, bool> completeCallBack)
         {
             InitializeComponent();
 
@@ -25,9 +28,8 @@ namespace ToDo.WinForms.Control
             taskGroup.Text = title;
             descriptionLabel.Text = description;
             deleteButton.Click += (s, e) => deleteCallBack?.Invoke(taskId);
-            
-
-
+            editButton.Click += (s, e) => editCallBack?.Invoke(taskId);
+            taskIsCompletedCheckBox.CheckedChanged += (s, e) => completeCallBack?.Invoke(taskId, taskIsCompletedCheckBox.Checked);
         }
     }
 }
